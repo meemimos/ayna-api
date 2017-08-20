@@ -1,0 +1,38 @@
+{
+  "name": "apiwithauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-register": "^6.24.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "express-promise-router": "^1.1.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.6.1",
+    "http": "0.0.0",
+    "joi": "^10.6.0",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.0.0",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.6",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^2.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

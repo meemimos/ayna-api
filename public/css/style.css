@@ -1,0 +1,31 @@
+ /* body {
+    background-color: black;
+}
+li {
+    font-family: 'ITC Avant Garde Gothic';
+}
+li:nth-child(odd) {
+    color: white;
+}
+li:nth-child(even) {
+    color: grey;
+}
+.greeting {
+    text-align: center;
+        margin-top: 15%;
+}
+.font-ayna {
+    font-family: 'ITC Avant Garde Gothic';
+    color: white;
+}
+.to-uppercase {
+    text-transform: uppercase;
+}
+.margin-top {
+    margin-top: 10%;
+}
+.margin-buttom {
+    margin-bottom: 2%;
+}
+        
+  */
