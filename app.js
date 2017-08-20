@@ -18,7 +18,7 @@ mongoose.connect(config.database);
 
 // On Connection
 mongoose.connection.on('connected', () => {
-  console.log('Connected to database ' + config.database);
+  console.log('Connected to database.. .');
 });
 
 // On Error
@@ -48,9 +48,6 @@ app.use(express.static('public'));
 
 app.use('/modules', cors(), modules);
 app.use('/users', cors(), users);
-
-// app.use(require('./src/app/routes/index.js'));
-
 
 // Catch 404 Errors and forward them to error handler
 app.use((req, res, next) => {
