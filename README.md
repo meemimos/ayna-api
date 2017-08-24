@@ -1,2 +1,2 @@
 # ayna-api
-ayna rest api using express node js
+ayna rest api using nodejs express framework
