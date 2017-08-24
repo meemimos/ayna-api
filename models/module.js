@@ -26,7 +26,7 @@ const moduleSchema = new Schema({
     },
     default: {
         type: Boolean,
-        default: true
+        default: false
     },
     user: {
         type: Schema.Types.ObjectId,
