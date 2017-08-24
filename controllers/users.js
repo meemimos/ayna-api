@@ -28,20 +28,19 @@ module.exports = {
         const newUser = new User({ username, email, password });
         const user = await newUser.save();
 
-        // Responds with Token
         res.status(201).json(user);
     },
 
     authenticate: async (req, res, next) => {
         var { username, password } = req.value.body;
+        console.log("error");
         
         // Check if there is a user with username
         User.getUserByUsername(username, (err, user) => {
             if(err) throw err;
             if(!user) {
                 return res.json({success: false, msg: 'User not found!'});
-            }
-            
+            } 
             User.comparePasswords(password, user.password, (err, isMatch) => {
                 if(err) throw err;
                 if(isMatch) {
@@ -63,7 +62,6 @@ module.exports = {
                 }
             });
         });
-
     },
 
     secret: async (req, res, next) => {
