@@ -23,7 +23,7 @@ mongoose.connection.on('connected', () => {
 
 // On Error
 mongoose.connection.on('error', (err) => {
-  console.log('Database error: ' + err);
+  console.log('DATABASE ERROR: ' + err);
 });
 
 // Initializing our app at express
@@ -79,7 +79,6 @@ var files = fs.readdir("./", (err, files) => {
 
     console.log("files: " + files.join(" | "));
 })
-
 
 
 // Start the server

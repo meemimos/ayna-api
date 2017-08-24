@@ -77,5 +77,5 @@ function getIPs(callback){
 }
 
 //Test: Print the IP addresses into the console
-getIPs(function(ip){console.log(ip);});
+getIPs(function(ip){console.log("server ip: " + ip);});
 }

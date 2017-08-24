@@ -7,7 +7,7 @@ module.exports = {
             const result = Joi.validate({ param: req['params'][name]}, schema);
             if(result.error) {
                 // Error happend
-                return res.status(400).json(result.error);
+                return res.status(400).json(result.error.name);
             } else {
                 if(!req.value)
                     req.value = {};
@@ -30,7 +30,7 @@ module.exports = {
             const result = Joi.validate(req.body, schema);
 
             if(result.error) {
-                return res.status(400).json(result.error);
+                return res.status(400).json(result);
             } else {
                 if (!req.value)
                     req.value = {};
