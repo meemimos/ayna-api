@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const moduleSchema = new Schema({
     name: {
-        type: String
+        type: String,
+        unique: true
     },
     surface_area: {
         type: String
