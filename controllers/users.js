@@ -105,12 +105,20 @@ module.exports = {
     getUserModules: async (req, res, next) => {
         const { userId } = req.value.params;
         const user = await User.findById(userId).populate(`modules`);
-        // console.log(`user`, user);sssss
+        // console.log(`user`, user);
         res.status(200).json(user.modules);
     },
 
     // Validation : DONE
     newUserModule: async (req, res, next) => {
+        // const { name } = req.body;
+        // const foundModuleByName = await Module.findOne({ name });
+        // console.log(foundModuleByName);
+        
+        // if(foundModuleByName) {
+        //     return res.status(403).json({error: 'This module is already in your module list.'})
+        // }
+
         const { userId } = req.value.params;
         // Create a new module
         const newModule = new Module(req.value.body);
@@ -121,6 +129,7 @@ module.exports = {
         // Save the module
         await newModule.save();
         // Add module to the user's user array 'modules'
+        console.log(user.modules);
         user.modules.push(newModule);
         // Save the user
         await user.save();

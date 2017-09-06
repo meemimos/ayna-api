@@ -11,6 +11,12 @@ module.exports = {
 
     newModule: async (req, res, next) => {
 
+        const foundModuleByName = await Module.findOne({ name });
+        console.log(foundModuleByName);
+        if(foundModuleByName) {
+            return res.status(403).json({error: 'This module is already in your module list.'})
+        }
+
         // 1. Find the actual user
         const user = await User.findById(req.body.user);
 

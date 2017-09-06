@@ -25,7 +25,7 @@ router.route('/:moduleId')
         ModuleController.replaceModule)
     .patch([validateParam(schemas.idSchema, 'moduleId'),
         validateBody(schemas.patchModuleSchema)],
-        // passport.authenticate('jwt', {session: false}),
+        passport.authenticate('jwt', {session: false}),
         ModuleController.updateModule)
     .delete(validateParam(schemas.idSchema, 'moduleId'),
         passport.authenticate('jwt', {session: false}),
