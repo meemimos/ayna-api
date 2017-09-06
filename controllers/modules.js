@@ -5,7 +5,8 @@ module.exports = {
 
     index: async (req, res, next) => {
         // Get all the modules
-        const modules = await Module.find({"default": "true"});
+        var sortByName = {name: 1};
+        const modules = await Module.find({"default": "true"}).sort(sortByName);
         res.status(200).json(modules);
     },
 
