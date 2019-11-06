@@ -20,7 +20,7 @@
     "helmet": "^3.6.1",
     "http": "0.0.0",
     "joi": "^10.6.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "jsdom": "^11.0.0",
     "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.10.6",
